@@ -1,0 +1,21 @@
+page = PAGE
+page {
+    typenum = 0
+
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = Default
+        layoutRootPaths {
+            10 = EXT:frontend/Resources/Private/Layouts
+            20 = EXT:t3basis/Resources/Private/Layouts
+        }
+        partialRootPaths {
+            10 = EXT:frontend/Resources/Private/Partials
+            20 = EXT:t3basis/Resources/Private/Partials
+        }
+        templateRootPaths {
+            10 = EXT:frontend/Resources/Private/Templates
+            20 = EXT:t3basis/Resources/Private/Templates
+        }
+    }
+}
