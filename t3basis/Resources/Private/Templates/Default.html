@@ -1,6 +1,5 @@
 <f:layout name="Default" />
 
 <f:section name="Main">
-    <h1>Willkommen</h1>
-    <f:render partial="Page/Hero" arguments="{_all}" />
+    <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
 </f:section>
