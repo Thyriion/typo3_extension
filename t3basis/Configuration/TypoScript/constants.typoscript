@@ -1,5 +1,9 @@
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
+
 page {
-    footer {
-        pid = 18
-    }    
+  fluidtemplate {
+    layoutRootPath = EXT:t3basis/Resources/Private/Layouts/Page/
+    partialRootPath = EXT:t3basis/Resources/Private/Partials/Page/
+    templateRootPath = EXT:t3basis/Resources/Private/Templates/Page/
+  }
 }
