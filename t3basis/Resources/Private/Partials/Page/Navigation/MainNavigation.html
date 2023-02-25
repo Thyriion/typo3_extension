@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg">
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <f:if condition="{mainNav -> f:count()}">
+                <f:for each="{mainNav}" as="menuItem">
+                    <f:if condition="{menuItem.hasSubpages}">
+                        <f:then>
+                            <li
+                                class="nav-item dropdown {f:if(condition: menuItem.active, then: 'active')}"
+                            >
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="{menuItem.link}"
+                                    id="navbarDropdownMenuLink"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                >
+                                    {menuItem.title}
+                                </a>
+                                <div
+                                    class="dropdown-menu"
+                                    aria-labelledby="navbarDropdown"
+                                >
+                                    <f:for each="menuItem.children" as="item">
+                                        <a
+                                            class="dropdown-item"
+                                            href="{item.link}"
+                                            target="{item.target}"
+                                            >{item.title}</a
+                                        >
+                                    </f:for>
+                                </div>
+                            </li>
+                        </f:then>
+                        <f:else>
+                            <li
+                                class="nav-item {f:if(condition: menuItem.active, then: 'active')}"
+                            >
+                                <a
+                                    class="nav-link"
+                                    href="{menuItem.link}"
+                                    target="{menuItem.target}"
+                                    >{menuItem.title}</a
+                                >
+                            </li>
+                        </f:else>
+                    </f:if>
+                </f:for>
+            </f:if>
+        </ul>
+    </div>
+</nav>

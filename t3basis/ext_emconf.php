@@ -1,18 +1,23 @@
 <?php
+
 $EM_CONF[$_EXTKEY] = [
     'title' => 'T3 Basis',
-    'description' => 'Erste Typo3 Template',
-    'category' => 'template',
+    'description' => 'T3 Basis',
+    'category' => 'templates',
     'author' => 'Kevin Schüler',
     'author_email' => 'kevinschueler2000@gmail.com',
     'author_company' => '',
-    'state' => 'stable',
     'version' => '1.0.0',
+    'state' => 'stable',
     'constraints' => [
         'depends' => [
-            'typo3' => '12.0.0-12.4.99',
+            'typo3' => '12.0.0-12.99.99',
+            'fluid_styled_content' => '12.0.0-12.99.99'
         ],
-        'conflicts' => [],
-        'suggests' => [],
+        'conflicts' => [
+        ],
     ],
+    'uploadfolder' => 0,
+    'createDirs' => '',
+    'clearCacheOnLoad' => 1
 ];
